@@ -6,7 +6,7 @@ class Author
     @posts = []
   end
   def add_post(post)
-    new_post = Post.new(post)
+    post.author = self
     @posts << new_post
     @@post_count += 1
   end
